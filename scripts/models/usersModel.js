@@ -6,6 +6,6 @@ define([
     var UsersModel = Backbone.Model.extend({
        // urlRoot: 'https://api.github.com/users/octocat'
     });
-    console.log("usersModel");
+   // console.log("usersModel");
     return UsersModel;
 });

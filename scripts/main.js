@@ -28,6 +28,6 @@ require([
     'app'
 
 ], function(App){
-    console.log("initialize main");
+  //  console.log("initialize main");
     App.initialize();
 });
