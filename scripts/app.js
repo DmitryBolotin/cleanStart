@@ -8,7 +8,8 @@ define([
 ], function ($, _, Backbone, UserModel, UsersCollection, UsersCollectionView) {
     var initialize = function () {
         var collView = new UsersCollectionView();
-      //  $('.page').html(collView.el);
+        $('#users-view-template').html(collView.el);
+        console.log(collView.el);
     };
 
     return {

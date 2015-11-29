@@ -3,7 +3,7 @@
         Stay away from this template!
     </h1>
     <ol>
-        <% _.each(users.models, function(user){ %>
+        <% _.each(users, function(user){ %>
         <li><a href='<%= user.get("html_url")%>'><%= user.get("login") %></a></li>
         <img src='<%= user.get("avatar_url")%>' alt="альтернативный текст" height="100" width="100">
         <% }); %>

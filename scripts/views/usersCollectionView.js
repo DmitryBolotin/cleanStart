@@ -5,38 +5,23 @@ define([
     'models/usersModel',
     'collections/usersCollection',
     'text!templates/usersTemplates.html'
-], function ($, _, Backbone, UserModel, UsersCollection, Templates) {
+], function ($, _, Backbone, UsersModel, UsersCollection, Templates) {
     var UsersCollectionView = Backbone.View.extend({
-        el: '.templateInsert',
+        el: '#users-view-template',
         template: _.template(Templates),
         initialize: function () {
             this.render();
             return this;
         },
-
         render: function () {
             var that = this;
-            var userModel = new UserModel();
+            var userModel = new UsersModel();
             var users_collection = new UsersCollection() ;
             var users = users_collection.fetch({
                     success: function (userModel,collection) {
-                       // console.log(userModel.get('id'));
-                        /*
-                        _.each(userModel.models,function(item){
-                            var some = item.get('id');
-                            console.log(some)
-                        });
-                        */
                         that.$el.html(that.template({
-                            users: userModel,
-                            _:_
+                            users: userModel.models
                         }));
-                        /*
-                        that.$el.html(that.template({
-                            usersId: userModel.models[0],
-                            usersLogin: userModel.models[0]
-                        }));
-                        */
                         return collection;
                     }});
             return this;

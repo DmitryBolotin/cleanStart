@@ -1,0 +1,16 @@
+ ---view
+
+  // console.log(userModel.get('id'));
+                        /*
+                        _.each(userModel.models,function(item){
+                            var some = item.get('id');
+                            console.log(some)
+                        });
+                        */
+
+                                                /*
+                                                that.$el.html(that.template({
+                                                    usersId: userModel.models[0],
+                                                    usersLogin: userModel.models[0]
+                                                }));
+                                                */
